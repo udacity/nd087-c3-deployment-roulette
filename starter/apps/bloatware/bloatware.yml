@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bloaty-mcbloatface
+  namespace: udacity
+spec:
+  replicas: 17
+  selector:
+    matchLabels:
+      app: bloaty-mcbloatface
+  minReadySeconds: 2 # how long it should wait until it creates the next pod.
+  template:
+    metadata:
+      labels:
+        app: bloaty-mcbloatface
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+          resources:
+            requests:
+              memory: "200Mi"
+              cpu: "250m"
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1 # specifies the maximum number (or percentage) of pods above the specified number of replicas.
+      maxUnavailable: 1 # declares the maximum number (or percentage) of unavailable pods during the update.
