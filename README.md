@@ -17,9 +17,9 @@ The AWS environment will be built in the `us-east-2` region of AWS
 1. Set up your AWS credentials from Udacity AWS Gateway locally
     - `https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html`
 
-2. From the AWS console create an S3 bucket in `us-east-2` called `udacity-tf-<your_name>` e.g `udacity-tf-emmanuel`
-    - Click next until created.
-    - Update `_config.tf` with your S3 bucket name
+2. From the AWS console manually create an S3 bucket in `us-east-2` called `udacity-tf-<your_name>` e.g `udacity-tf-emmanuel`
+   - The click `create bucket`
+   - Update `_config.tf` with your S3 bucket name
 
 3. Deploy Terraform infrastructure
     - `terraform init`
@@ -45,9 +45,7 @@ The AWS environment will be built in the `us-east-2` region of AWS
 1. [CI-CD to AWS]
    The previous team did not have time to implement a `CI/CD` Solution. You decide you need to automate this process to free your hands to work on other tasks
     1. Create a GitHub repository to house your solution.
-    2. Students should set up a CI/CD pipeline with GitHub Actions that can access the AWS environment with the `github-ci-cd` IAM user.
-        1. The access/secret keys can be found in the AWS system manager parameter store
-            1. `github-cicd-access-id` & `github-cicd-access-secret`
+    2. Students should set up a CI/CD pipeline with GitHub Actions that can access the AWS environment with your classroom `AWS Access Key ID`, `AWS Secret Access Key`, & `AWS Session Token`
 2. [Deployment Troubleshooting]
    A previously deployed microservice `hello-world` doesn't seem to be reachable at its public endpoint. The product teams need you to fix this asap!
     1. The `apps/hello-world` deployment is facing deployment issues.
