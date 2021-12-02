@@ -67,10 +67,11 @@ The product teams want a blue-green deployment for the `green` version of the `/
    2. mimic the blue deployment configuration and replace the `index.html` with the values in `green-config` config-map
    3. The bash script will wait for the new deployment to successfully roll out and the service to be reachable.
    4. Create a new weighted CNAME record `blue-green.udacityproject` in Route53 for the green environment
-   5. Use the `curl` ec2 instance to curl the `blue-green.udacityproject` url and document that green & blue services are reachable
+   5. Use the `curl` ec2 instance to curl the `blue-green.udacityproject` url and take a screenshot to document that green & blue services are reachable
+      1. The screenshot should be named `green-blue.png`
    6. Simulate a failover event to the `green` environment by destroying the blue environment
    7. Ensure the `blue-green.udacityproject` record now only returns the green environment
-      - curl `blue-green.udacityproject` and save the results in `blue-green.txt` from the `curl` ec2 instance
+      - curl `blue-green.udacityproject` and take a screenshot of the results named `green-only.png` from the `curl` ec2 instance
 5. [Node elasticity]
 A microservice `bloaty-mcface` must be deployed for compliance reasons before the company can continue business. Ensure it is deployed successfully
    1. Deploy `apps/bloatware` microservice
@@ -79,12 +80,15 @@ A microservice `bloaty-mcface` must be deployed for compliance reasons before th
 6. [Observability with metrics]
 You have realized there is no observability in the Kubernetes environment. You suspect there is a service unnecessarily consuming too much memory and needs to be removed
    1. Install a metrics server on the kubernetes cluster and identify the service using up the most memory 
-      - Log the output of the metrics command used to a file called `before.txt` 
+      - Take a screenshot of the output of the metrics command used to a file called `before.png`
+      - Document the name of the application using the most memory in a text file called `high_memory.txt`
    2. Delete the service with the most memory usage from the cluster
-      - Log the output of the same metrics command to a file called `after.txt`
+      - Take a screenshot of the output of the same metrics command to a file called `after.png`
 7. [Diagramming the cloud landscape with Bob Ross]  
 In order to improve the onboarding of future developers. You decide to create an architecture diagram so that they don't have to learn the lessons you have learnt the hard way.
    1. Create an architectural diagram that accurately describes the current status of your AWS environment.
+      1. Make sure to include your AWS resources like the EKS cluster, load balancers
+      2. Visualize one or two deployments and their microservices
 
 
 ## Project Clean Up
