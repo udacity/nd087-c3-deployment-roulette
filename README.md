@@ -25,10 +25,11 @@ The AWS environment will be built in the `us-east-2` region of AWS
    - Update `_config.tf` with your S3 bucket name
 
 3. Deploy Terraform infrastructure
+   - `cd starter/infra`
    - `terraform init`
    - `terraform apply`
 
-4. Setup Kubernetes config so you can ping the EKS cluster
+5. Setup Kubernetes config so you can ping the EKS cluster
    - `aws eks --region us-east-2 update-kubeconfig --name udacity-cluster`
    - Change Kubernetes context to the new AWS cluster
      - `kubectl config use-context <cluster_name>`
@@ -37,10 +38,10 @@ The AWS environment will be built in the `us-east-2` region of AWS
    - Change context to `udacity` namespace
      - `kubectl config set-context --current --namespace=udacity`
 
-5. Run K8s initialization script
+6. Run K8s initialization script
    - `./initialize_k8s.sh`
 
-6. Done
+7. Done
 
 ### Project Tasks
 *NOTE* All AWS infrastructure changes outside of the EKS cluster can be made in the project terraform code
@@ -95,6 +96,7 @@ In order to improve the onboarding of future developers. You decide to create an
 In an effort to reduce your cost footprint in the AWS environment. Feel free to tear down your aws environment when not in use.
 Clean up the environment with the `nuke_everything.sh` script or run the steps individually
 ```
+cd starter/infra
 terraform state rm kubernetes_namespace.udacity && terraform state rm kubernetes_service.blue
 eksctl delete iamserviceaccount --name cluster-autoscaler --namespace kube-system --cluster udacity-cluster --region us-east-2
 kubectl delete all --all -n udacity
