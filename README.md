@@ -77,7 +77,7 @@ The product teams want a blue-green deployment for the `green` version of the `/
 A microservice `bloaty-mcface` must be deployed for compliance reasons before the company can continue business. Ensure it is deployed successfully
    1. Deploy `apps/bloatware` microservice
    2. Identify if the application deployment was successful and if not resolve any issues found
-      1. Take a screenshot of the reason why the deploy was not successful
+      1. Take a screenshot of the reason why the deployment was not successful
       2. Provide code or Take a screenshot of the resolution step
    3. Provide the output of `kubectl get pods --all-namespaces` to show deployed services
 6. [Observability with metrics]
