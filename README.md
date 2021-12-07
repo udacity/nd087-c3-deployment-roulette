@@ -99,7 +99,7 @@ The AWS environment will be built in the `us-east-2` region of AWS
     2. Delete the service with the most memory usage from the cluster
         - Take a screenshot of the output of the same metrics command to a file called `after.png`
 
-7. *[Diagramming the cloud landscape with Bob Ross]*  
+6. *[Diagramming the cloud landscape with Bob Ross]*  
    In order to improve the onboarding of future developers. You decide to create an architecture diagram so that they
    don't have to learn the lessons you have learnt the hard way.
     1. Create an architectural diagram that accurately describes the current status of your AWS environment.
