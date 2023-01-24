@@ -15,7 +15,7 @@ variable "nodes_desired_size" {
 
 variable "nodes_max_size" {
   description = "The maximum number of EC2 instances to run."
-  default     = 2
+  default     = 6
 }
 
 variable "nodes_min_size" {

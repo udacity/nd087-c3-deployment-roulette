@@ -1,0 +1,12 @@
+(base) SPJDevs-MacBook-Pro:nd087-c3-deployment-roulette RJIUser$ kubectl get pods -n udacity
+NAME                           READY   STATUS    RESTARTS   AGE
+blue-8475cbdf46-cnpmv          1/1     Running   0          43s
+blue-8475cbdf46-n5tgn          1/1     Running   0          43s
+blue-8475cbdf46-pmj9v          1/1     Running   0          43s
+canary-v1-64598c676f-fpd77     1/1     Running   0          45s
+canary-v1-64598c676f-jqdfm     1/1     Running   0          45s
+canary-v1-64598c676f-ttldc     1/1     Running   0          45s
+canary-v2-5dc9c56687-584gr     1/1     Running   0          17s
+canary-v2-5dc9c56687-h2t4t     1/1     Running   0          17s
+canary-v2-5dc9c56687-slzvc     1/1     Running   0          26s
+hello-world-794458d64d-5k2nc   1/1     Running   0          49s

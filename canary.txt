@@ -1,0 +1,43 @@
+(base) SPJDevs-MacBook-Pro:nd087-c3-deployment-roulette RJIUser$ kubectl run debug --rm -i --tty --image nicolaka/netshoot -- /bin/bash
+If you don't see a command prompt, try pressing enter.
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.233.209
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# 
