@@ -9,7 +9,7 @@
 - [awscli](https://aws.amazon.com/cli/)
 - [eksctl](https://eksctl.io/introduction/#installation)
 - [terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
-- [helm](https://www.eksworkshop.com/beginner/060_helm/helm_intro/install/)
+- [helm](https://helm.sh/docs/intro/install/)
 
 ### Installation
 
