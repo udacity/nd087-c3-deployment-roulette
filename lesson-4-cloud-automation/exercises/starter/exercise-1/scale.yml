@@ -1,0 +1,26 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hello-world
+  namespace: udacity
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: hello-world
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50        # target percentage
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        # averageUtilization: 100       # target percentage
+        averageValue: 100              # target average value
